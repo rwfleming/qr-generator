@@ -16,18 +16,22 @@ pip3 install Pillow qrcode
 
 ## Usage
 
-To use the script, you need to pass three arguments:
+To use the script, you need to pass three mandatory arguments:
 1. The URL to encode in the QR code.
 2. A two-digit number to display in the center of the QR code.
 3. A location identifier for the filename of the saved QR code.
 
+Additionally, there are two optional arguments for customization:
+- `--font-size <size>`: Specify the font size for the number. Default is 100.
+- `--padding <size>`: Specify the padding around the number. Default is 10.
+
 The script can be executed from the command line as follows:
 
 ```bash
-python3 script.py <url> <two-digit-number> <location>
+python3 script.py <url> <two-digit-number> <location> [--font-size <size>] [--padding <size>]
 ```
 
-### Example
+### Examples
 
 To create a QR code for the URL `https://example.com` with the number `42` in the center and save it with the location identifier `office`, you would run:
 
@@ -36,6 +40,12 @@ python3 script.py "https://example.com" "42" "office"
 ```
 
 This command generates a QR code saved as `QR-office-42.png`.
+
+To additionally customize the font size to 150 and padding to 20, the command would be:
+
+```bash
+python3 script.py "https://example.com" "42" "office" --font-size 150 --padding 20
+```
 
 ## Help
 
@@ -50,4 +60,4 @@ This will display detailed usage instructions.
 ## Customization
 
 - The script uses the Helvetica font for the centered number. Ensure the font is available on your system or modify the script to use a different font.
-- You can adjust the font size and the padding around the number by modifying the corresponding values in the script.
+- The font size and padding around the number can be customized using the optional `--font-size` and `--padding` arguments.
