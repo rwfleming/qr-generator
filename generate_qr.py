@@ -2,12 +2,26 @@ import qrcode
 from PIL import Image, ImageDraw, ImageFont
 import sys
 
-# Check if a URL and a number are passed as arguments
-if len(sys.argv) < 3:
-    print("Usage: python script.py <url> <two-digit-number>")
+def print_help():
+    help_message = """
+    Usage: python script.py <url> <two-digit-number> <location>
+    
+    Arguments:
+    - <url>: The URL to be encoded in the QR code.
+    - <two-digit-number>: A two-digit number to display in the center of the QR code.
+    - <location>: The location identifier for the filename of the saved QR code.
+    
+    Example: python script.py "https://example.com" "42" "office"
+    This will generate a QR code for "https://example.com" with "42" in the center, saved as "QR-office-42.png".
+    """
+    print(help_message)
+
+# Check for help or the correct number of arguments
+if len(sys.argv) != 4 or sys.argv[1].lower() in ["help", "-h", "--help"]:
+    print_help()
     sys.exit(1)
 
-# The URL and the number are the first and second arguments passed to the script
+# The URL, number, and location are the arguments passed to the script
 url = sys.argv[1]
 number = sys.argv[2]
 location = sys.argv[3]
@@ -66,4 +80,4 @@ filename = f'QR-{location}-{number}.png'
 # Save the QR code generated
 QRimg.save(filename)
 
-print('QR code generated!')
+print(f'QR code generated and saved as {filename}!')
