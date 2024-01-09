@@ -2,7 +2,7 @@
 
 This script generates a QR code for a specified URL and overlays a one or two-digit number in the center. The generated QR code is saved as a PNG file with a naming convention based on the specified location and number.
 
-The problem this script is trying to solve is organizing plastic garage bins for storage.  The contents of each bin is put in a docx file in a dropbox folder with an assigned 01-99 number.  This makes searching for a specific item easy.  The link to each doc is then used to generate the QR code.  The code then gets printed and taped to the outside of the bin.  This allows you to also easily scan the bin to view the contents without having to pull it down.  As the contents of the bins get added/removed/change, the document each of the QR codes points to can be updated as needed.
+The problem this script is trying to solve is organizing plastic garage bins for storage.  The contents of each bin is put in a docx file in a dropbox folder with an assigned 1-99 number.  This makes searching for a specific item easy.  The link to each doc is then used to generate the QR code.  The code then gets printed and taped to the outside of the bin.  This allows you to also easily scan the bin to view the contents without having to pull it down.  As the contents of the bins get added/removed/change, the document each of the QR codes points to can be updated as needed.
 
 ## Requirements
 
