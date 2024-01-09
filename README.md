@@ -1,6 +1,6 @@
 # QR Code Generator with Centered Number
 
-This script generates a QR code for a specified URL and overlays a one or two-digit number in the center. The generated QR code is saved as a PNG file with a naming convention based on the specified location and number.
+This script generates a QR code for a specified URL and overlays a three-digit or less number in the center. The generated QR code is saved as a PNG file with a naming convention based on the specified location and number.
 
 The problem this script is trying to solve is organizing plastic garage bins for storage.  The contents of each bin is put in a docx file in a dropbox folder with an assigned 1-99 number.  This makes searching for a specific item easy.  The link to each doc is then used to generate the QR code.  The code then gets printed and taped to the outside of the bin.  This allows you to also easily scan the bin to view the contents without having to pull it down.  As the contents of the bins get added/removed/change, the document each of the QR codes points to can be updated as needed.
 
@@ -20,7 +20,7 @@ pip3 install Pillow qrcode
 
 To use the script, you need to pass three mandatory arguments:
 1. The URL to encode in the QR code.
-2. A one or two-digit number to display in the center of the QR code.
+2. A number, three-digits or less, to display in the center of the QR code.
 3. A location identifier for the filename of the saved QR code.
 
 Additionally, there are two optional arguments for customization:
@@ -30,7 +30,7 @@ Additionally, there are two optional arguments for customization:
 The script can be executed from the command line as follows:
 
 ```bash
-python3 script.py <url> <two-digit-number> <location> [--font-size <size>] [--padding <size>]
+python3 script.py <url> <three-digit-number> <location> [--font-size <size>] [--padding <size>]
 ```
 
 ### Examples

@@ -8,7 +8,7 @@ def print_help():
     
     Arguments:
     - <url>: The URL to be encoded in the QR code.
-    - <two-digit-number>: A one or two-digit number to display in the center of the QR code.
+    - <three-digit-number>: A number, three-digits or less, to display in the center of the QR code.
     - <location>: The location identifier for the filename of the saved QR code.
 
     Options:
@@ -42,8 +42,8 @@ for i in range(4, len(sys.argv)):
         padding = int(sys.argv[i+1])
 
 # Ensure the number is one or two digits
-if not (number.isdigit() and 1 <= len(number) <= 2):
-    print("The number must be a one or two-digit number.")
+if not (number.isdigit() and 1 <= len(number) <= 3):
+    print("The number must be three-digits or less.")
     sys.exit(1)
 
 QRcode = qrcode.QRCode(
