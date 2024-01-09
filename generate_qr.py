@@ -56,21 +56,21 @@ QRcode.add_data(url)
 # Generating QR code
 QRcode.make()
 
-# Taking color name from user
+# Assigning QR color
 QRcolor = 'Black'
 
 # Adding color to QR code
 QRimg = QRcode.make_image(
     fill_color=QRcolor, back_color="white").convert('RGB')
 
-# Create an ImageDraw object
+# Create an ImageDraw object of the number
 draw = ImageDraw.Draw(QRimg)
 
 # Set the font type
 font_path = "/System/Library/Fonts/Helvetica.ttc"
 font = ImageFont.truetype(font_path, font_size, index=1)
 
-# Alternative way to estimate text size
+# Estimate text size
 approximate_text_width = font.getmask(number).getbbox()[2]
 approximate_text_height = font.getmask(number).getbbox()[3]
 
